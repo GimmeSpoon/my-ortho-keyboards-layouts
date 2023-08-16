@@ -15,7 +15,6 @@
  */
 
 #include QMK_KEYBOARD_H
-#include "muse.h"
 
 
 enum planck_layers {
@@ -157,15 +156,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |Aud on|Audoff|MUSmod|AGnorm|AGswap| HUE+ | HUE- | SAT+ | SAT- |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |Voice-|Voice+|Mus on|Musoff|MIDIon|MIDIof|      |BRGTH-|BRGTH+|      |      |
+ * |      |      |      |Mus on|Musoff|MIDIon|MIDIof|      |BRGTH-|BRGTH+|      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Brite|      |      |      |      |      |      |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 [_ADJUST] = LAYOUT_planck_grid(
-    _______,  QWERTY, COLEMAK,  DVORAK, QK_BOOT,   DEBUG, RGB_TOG, RGB_MOD, _______, _______, PLOVER,  KC_DEL ,
-    _______,   AU_ON,  AU_OFF,  MU_MOD, AG_NORM, AG_SWAP, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, _______, _______,
-    _______,  MUV_DE,  MUV_IN,   MU_ON,  MU_OFF,   MI_ON,  MI_OFF, _______, RGB_VAD, RGB_VAI, _______, _______,
+    _______,  QWERTY, COLEMAK,  DVORAK, QK_BOOT, DB_TOGG, RGB_TOG, RGB_MOD, _______, _______, PLOVER,  KC_DEL ,
+    _______,   AU_ON,  AU_OFF, MU_TOGG, AG_NORM, AG_SWAP, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, _______, _______,
+    _______, AU_PREV, AU_NEXT,   MU_ON,  MU_OFF,   MI_ON,  MI_OFF, _______, RGB_VAD, RGB_VAI, _______, _______,
     BACKLIT, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 )
 
